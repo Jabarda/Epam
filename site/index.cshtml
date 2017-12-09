@@ -1,9 +1,11 @@
-@{ 
-    double F (int i) {
+@functions{
+	double F (int i) {
 		if (i>100) return 0;
 		return 1 + i / (2.0 * i + 1) * F(i + 1);
 	};
-	txt = 2*F(1);
+}
+@{ 
+	var txt = 2*F(1);
 }
 
 <html>
