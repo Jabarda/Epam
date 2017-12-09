@@ -1,15 +1,11 @@
 @{ 
     var txt = Math.PI;
 	var counter = 0;
-	void AddCounter ()
-	{
-		counter++;
-	}
 }
 <html>
 <body>
     <p>Pi equals to @txt</p>
-	<button type="button" onclick=@AddCounter>Add 1 to counter!</button>
+	<button type="button" onclick=function(){@counter=@counter+1;}>Add 1 to counter!</button>
 	<p>Clicks : @counter</p> 
 </body>
 </html>
