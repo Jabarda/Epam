@@ -1,11 +1,33 @@
 @{ 
     var txt = Math.PI;
-	var counter = 0;
+	var counter,A,B,C;
+}
+@functions{
+	public int root1()
+	{
+		return ((-B + Math.sqrt(B*B-4*A*C))/(2*A))
+	}
+	public int root2()
+	{
+		return ((-B - Math.sqrt(B*B-4*A*C))/(2*A))
+	}
 }
 <html>
 <body>
     <p>Pi equals to @txt</p>
-	<button type="button" onclick=function(){@counter=@counter+1;}>Add 1 to counter!</button>
-	<p>Clicks : @counter</p> 
+	<p>let's solve square equation</p> 
+		<p1>
+			<input type="number" id="A"> * x^2 + <input type="number" id="B"> * x + <input type="number" id="C"> = 0
+			<input type=button text="Solve!" onclick=function()
+				{
+					@A=document.getElementById("A").value;
+					@B=document.getElementById("B").value;
+					@C=document.getElementById("C").value;
+					alert("Root 1 ="+@root1 + "\nRoot 2 = "+@root2);
+				}
+			>
+			
+		</p1>
+		
 </body>
 </html>
