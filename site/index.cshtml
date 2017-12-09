@@ -18,15 +18,17 @@
 		<p1>
 			<input type="number" id="A"> * x^2 + <input type="number" id="B"> * x + <input type="number" id="C"> = 0
 			<input type=button value="Solve!">
-			<input type=button value="Solve!" onclick=function()
-				{
+			<input type=button value="Solve!" id=solvebutton>
+			
+		</p1>
+		
+</body>
+<script>
+	solvebutton.onclick=function(){
 					@A=document.getElementById("A").value;
 					@B=document.getElementById("B").value;
 					@C=document.getElementById("C").value;
 					alert("Root 1 ="+@root1() + "\nRoot 2 = "+@root2());
 				}
-			>
-		</p1>
-		
-</body>
+</script>
 </html>
