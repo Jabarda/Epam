@@ -1,19 +1,11 @@
 @{ 
     double F (int i) {
-	if (i>100) return 0;
-    return 1 + i / (2.0 * i + 1) * F(i + 1);
+		if (i>100) return 0;
+		return 1 + i / (2.0 * i + 1) * F(i + 1);
 	};
 	txt = 2*F(1);
 }
-@functions{
-	double counter,A,B,C;
-	public double root1(){
-		return ((-B + Math.Sqrt(B*B-4*A*C))/(2*A));
-	}
-	public double root2(){
-		return ((-B - Math.Sqrt(B*B-4*A*C))/(2*A));
-	}
-}
+
 <html>
 <body>
     <p>Pi equals to @txt</p>
